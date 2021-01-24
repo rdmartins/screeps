@@ -5,7 +5,7 @@ import { run as repair } from './repairer';
 import { run as upgrade } from './upgrader';
 import { run as extract } from './extractor';
 import { AttackAndRepair } from './tower';
-import * as spawner from './spawner';
+import { Population, Options, controlRoomPopulation } from './spawner';
 
 /**
  * Clear dead creeps from Memory
@@ -24,19 +24,19 @@ function clearMemory() {
  */
 function controlRoomsPopulation(rooms: Room[]) {
   Object.values(rooms).forEach((room) => {
-    const population: spawner.Population = {
+    const population: Population = {
       maxBuilders: 1,
       maxExtractors: 2,
       maxStorers: 2,
       maxRepairers: 1,
       maxUpgraders: 1,
     };
-    const options: spawner.Options = {
+    const options: Options = {
       bodyCap: 0,
       noWait: false
     };
 
-    spawner.controlRoomPopulation(room, population, options);
+    controlRoomPopulation(room, population, options);
     AttackAndRepair(room); // TODO: create a defense loop
   });
 }
