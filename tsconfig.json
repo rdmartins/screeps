@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "removeComments": true,
+    /*                                           
+    /*/ "outDir": "C:/Users/rdmartins/AppData/Local/Screeps/scripts/192_168_15_109___21025/TypeScript",
+    /*/ "outDir": "./dist",
+    //*/
+  },
+  "extends": "@tsconfig/node10/tsconfig.json"
+}

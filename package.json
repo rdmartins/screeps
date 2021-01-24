@@ -1,0 +1,17 @@
+{
+  "name": "private",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@tsconfig/node10": "^1.0.7",
+    "@types/screeps": "^3.2.1",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
