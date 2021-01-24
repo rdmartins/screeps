@@ -63,7 +63,7 @@ function construct(spawn: StructureSpawn, role: CreepRole, options: Options) {
  * @param  {Population} population - Population of each creep's role
  * @param  {Options} options
  */
-export function controlRoomPopulation(room: Room, population: Population, options: Options) {
+export function controlRoomPopulation(room: Room, population: Population, options: Options): void {
   let totalCreeps = 0;
   Object.values(population).forEach((x) => {
     totalCreeps += x;

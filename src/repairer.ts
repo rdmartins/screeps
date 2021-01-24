@@ -11,7 +11,7 @@ import { run as harvest } from './harvester';
  * `ClosestByRange`: Find an object with the shortest linear distance from the given position.
  * @param  {Number} threshold - The percentual to filter the targets.
  */
-function findNewTarget(creep: Creep, criteria: SearchCriteria, threshold: number = 0.7) {
+function findNewTarget(creep: Creep, criteria: SearchCriteria, threshold = 0.7) {
   let structure: AnyStructure | null;
 
   switch (criteria) {
@@ -26,10 +26,9 @@ function findNewTarget(creep: Creep, criteria: SearchCriteria, threshold: number
       });
       break;
     case SearchCriteria.MostNeeded:
-      const structures = creep.room.find(FIND_STRUCTURES, {
+      [structure] = creep.room.find(FIND_STRUCTURES, {
         filter: (structure) => structure.hits < structure.hitsMax * threshold
-      });
-      [structure] = structures.sort((a, b) => (a.hits / a.hitsMax) - (b.hits / b.hitsMax));
+      }).sort((a, b) => (a.hits / a.hitsMax) - (b.hits / b.hitsMax));
       break;
     default:
       [structure] = creep.room.find(FIND_STRUCTURES, {
@@ -81,7 +80,7 @@ const repair = (creep: Creep) => {
  * Repair a structure
  * @param {Creep} creep - The creep to run the role.
  */
-export function run(creep: Creep) {
+export function run(creep: Creep): void {
   switch (creep.memory.mode) {
     case CreepMode.Harvest:
       harvest(creep);

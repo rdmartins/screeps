@@ -1,4 +1,4 @@
-export function W8N3() {
+export function W8N3(): void {
   const sourceLink = Game.getObjectById('6000b7c9a3371d45fe1426f4') as StructureLink;
   const controllerLink = Game.getObjectById('6000bc1a04790945efed35f6') as StructureLink;
 

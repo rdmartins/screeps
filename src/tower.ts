@@ -1,7 +1,5 @@
-export function AttackAndRepair(room: Room) {
-  let towers: StructureTower[];
-
-  towers = room.find(FIND_MY_STRUCTURES, {
+export function AttackAndRepair(room: Room): void {
+  const towers = room.find(FIND_MY_STRUCTURES, {
     filter: (s) => s.structureType === STRUCTURE_TOWER,
   }) as StructureTower[];
 

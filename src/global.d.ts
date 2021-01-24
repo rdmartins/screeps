@@ -1,1 +1,1 @@
-declare var _: any;
+declare let _;

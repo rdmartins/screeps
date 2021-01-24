@@ -7,7 +7,7 @@
  * `ClosestByPath`: Find an object with the shortest path from the given position.
  * `ClosestByRange`: Find an object with the shortest linear distance from the given position.
  */
-export function findSource(creep: Creep, criteria: SearchCriteria) {
+export function findSource(creep: Creep, criteria: SearchCriteria): void {
   let source: Source | null;
 
   switch (criteria) {
@@ -42,7 +42,7 @@ export function spawnCreep(
   model: BodyPartConstant[],
   multiplier: number,
   spawn: StructureSpawn
-) {
+): void {
   for (let i = 0; i < multiplier; i += 1) {
     body.push(...model);
   }

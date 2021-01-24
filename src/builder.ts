@@ -19,6 +19,7 @@ function findNewTarget(creep: Creep, criteria: SearchCriteria) {
       break;
     case SearchCriteria.ClosestByRange:
       constructionSite = creep.pos.findClosestByRange(FIND_MY_CONSTRUCTION_SITES) as ConstructionSite;
+      break;
     default:
       [constructionSite] = creep.room.find(FIND_MY_CONSTRUCTION_SITES);
   }
@@ -61,7 +62,7 @@ const build = (creep: Creep) => {
  * Build a structure
  * @param {Creep} creep - The creep to run the role.
  */
-export function run(creep: Creep) {
+export function run(creep: Creep): void {
   switch (creep.memory.mode) {
     case CreepMode.Harvest:
       harvest(creep);

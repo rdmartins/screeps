@@ -29,7 +29,7 @@ function construct(spawn: StructureSpawn, roomName: string) {
  * Go to target room and claim the Controller.
  * @param {Creep} creep - The creep to run the role.
  */
-export function run(creep: Creep) {
+export function run(creep: Creep): void {
   if (creep.memory.target) {
     const room = Game.rooms[creep.memory.target];
 
@@ -64,7 +64,7 @@ export function run(creep: Creep) {
  * @param  {string} roomName - What room to attack.
  * @param  {int} maxPopulation
  */
-export function controlPopulation(spawn: StructureSpawn, roomName: string, maxPopulation: number) {
+export function controlPopulation(spawn: StructureSpawn, roomName: string, maxPopulation: number): void {
   const claimers = _.filter(Game.creeps, (creep: Creep) => creep.memory.role === 'claimer');
 
   if (claimers.length < maxPopulation) {

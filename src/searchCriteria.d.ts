@@ -1,5 +1,5 @@
 declare const enum SearchCriteria {
-    ClosestByPath = 'closestByPath',
-    ClosestByRange = 'closestByRange',
-    MostNeeded = 'mostNeeded',
+  ClosestByPath = 'closestByPath',
+  ClosestByRange = 'closestByRange',
+  MostNeeded = 'mostNeeded',
 }

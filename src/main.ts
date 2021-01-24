@@ -73,7 +73,7 @@ function runCreeps(creeps: Creep[]) {
 }
 
 /* Game main loop */
-export function loop() {
+export function loop(): void {
   const creeps = Game.creeps as unknown as Creep[];
   const rooms = Game.rooms as unknown as Room[];
 

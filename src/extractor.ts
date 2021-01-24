@@ -3,7 +3,7 @@
  * @param  {number} multiplier - Multiply body size.
  * @param  {StructureSpawn} spawn - Where to spawn the new creep.
  */
-export function construct(multiplier: number, spawn: StructureSpawn) {
+export function construct(multiplier: number, spawn: StructureSpawn): void {
   const body: BodyPartConstant[] = [MOVE];
   const model: BodyPartConstant[] = [WORK];
 
@@ -25,9 +25,7 @@ export function construct(multiplier: number, spawn: StructureSpawn) {
  * @param  {Creep} creep - The creep to find the container for
  */
 function findNewContainer(creep: Creep) {
-  let containers: StructureContainer[];
-
-  containers = creep.room.find(FIND_STRUCTURES, {
+  const containers = creep.room.find(FIND_STRUCTURES, {
     filter: (s) => s.structureType === STRUCTURE_CONTAINER
   }) as StructureContainer[];
 
@@ -57,7 +55,7 @@ function findSource(creep: Creep) {
   creep.memory.source = (creep.pos.findClosestByRange(FIND_SOURCES) as Source).id;
 }
 
-export function run(creep: Creep) {
+export function run(creep: Creep): void {
   if (creep.memory.container) {
     const container = Game.getObjectById(creep.memory.container);
 

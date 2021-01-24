@@ -52,7 +52,7 @@ function findNewTarget(creep: Creep, criteria: SearchCriteria) {
  * Harvest energy.
  * @param  {Creep} creep - The creep to run the role.
  */
-export function run(creep: Creep) {
+export function run(creep: Creep): void {
   const criteria = SearchCriteria.ClosestByPath;
   let target: Source | StructureContainer | null;
   let returnCode: ScreepsReturnCode = 0;

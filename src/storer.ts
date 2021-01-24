@@ -119,7 +119,7 @@ const store = (creep: Creep) => {
  * Harvest energy from a source.
  * @param {Creep} creep - The creep to run the role.
  */
-export function run(creep: Creep) {
+export function run(creep: Creep): void {
   switch (creep.memory.mode) {
     case CreepMode.Harvest:
       harvest(creep);
@@ -130,4 +130,4 @@ export function run(creep: Creep) {
     default:
       store(creep);
   }
-};
+}
