@@ -3,9 +3,8 @@
     "rootDir": "./src",
     "removeComments": true,
     /*                                           
-    /*/ "outDir": "C:/Users/rdmartins/AppData/Local/Screeps/scripts/192_168_15_109___21025/TypeScript",
+    /*/ "outDir": "/home/rdmartins/.config/Screeps/scripts/127_0_0_1___21025/default",
     /*/ "outDir": "./dist",
     //*/
-  },
-  "extends": "@tsconfig/node10/tsconfig.json"
+  }
 }
